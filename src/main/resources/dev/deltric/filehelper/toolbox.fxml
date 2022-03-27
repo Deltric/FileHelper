@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<VBox spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="dev.deltric.filehelper.controller.ToolboxController">
+    <!--File Names-->
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label style="-fx-font: normal bold 20px 'serif'" text="File Name Pattern"/>
+    <TextField fx:id="fileNamePatternField"/>
+    <Label style="-fx-font: normal bold 20px 'serif'" text="File Name Replacement"/>
+    <TextField fx:id="fileNameReplacementField"/>
+
+    <VBox alignment="TOP_CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml">
+        <Label fx:id="fileNameReplaceLabel"/>
+        <Button text="Replace File Names" onAction="#onReplaceFileNames"/>
+    </VBox>
+
+    <!--File Contents-->
+    <Label style="-fx-font: normal bold 20px 'serif'" text="File Contents Pattern"/>
+    <TextField fx:id="fileContentsPatternField"/>
+    <Label style="-fx-font: normal bold 20px 'serif'" text="File Contents Replacement"/>
+    <TextField fx:id="fileContentsReplacementField"/>
+    <Label style="-fx-font: normal bold 20px 'serif'" text="File Contents Exclude"/>
+    <TextField fx:id="fileContentsExcludeField"/>
+
+    <VBox alignment="TOP_CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml">
+        <Label fx:id="fileContentsReplaceLabel"/>
+        <Button text="Replace File Contents" onAction="#onReplaceFileContents"/>
+    </VBox>
+
+    <VBox alignment="TOP_CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml">
+        <Button text="Back" onAction="#onBack"/>
+    </VBox>
+</VBox>
